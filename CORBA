@@ -114,3 +114,13 @@ public class CalculatorClient {
     	}
 	}
 }
+
+
+Commands
+idlj -fall Calculator.idl
+tnameserv -ORBInitialPort 1050
+
+javac *.java CalculatorApp/*.java
+java CalculatorServer -ORBInitialPort 1050 -ORBInitialHost localhost
+
+java CalculatorClient -ORBInitialPort 1050 -ORB InitialHost localhost
